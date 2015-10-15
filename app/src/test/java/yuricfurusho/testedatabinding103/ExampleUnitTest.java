@@ -1,4 +1,4 @@
-package yuricfurusho.testedatabinding101;
+package yuricfurusho.testedatabinding103;
 
 import org.junit.Test;
 

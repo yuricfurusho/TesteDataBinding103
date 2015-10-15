@@ -1,4 +1,4 @@
-package yuricfurusho.testedatabinding101;
+package yuricfurusho.testedatabinding103;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
