@@ -15,7 +15,7 @@ import yuricfurusho.testedatabinding103.databinding.AdapterUserBinding;
  * Created by live on 15/10/15.
  */
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
-    private List<User> listUsers;
+    public List<User> listUsers;
 
     public UserAdapter(List<User> listUsers) {
         this.listUsers = listUsers;
@@ -35,15 +35,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listUsers != null && listUsers.size() > 0 ? listUsers.size() : 0;
     }
 
     class UserViewHolder extends RecyclerView.ViewHolder {
 
-        private AdapterUserBinding mBinding;
+        public AdapterUserBinding mBinding;
 
         public UserViewHolder(AdapterUserBinding binding) {
             super(binding.getRoot());
+            mBinding = binding;
         }
 
         public void bindTo(User user) {
